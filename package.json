@@ -1,0 +1,15 @@
+{
+  "name": "proxy-gateway",
+  "version": "1.0.0",
+  "description": "Transparent WebSocket proxy from 8080 to 18789",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "http-proxy": "^1.18.1"
+  }
+}
