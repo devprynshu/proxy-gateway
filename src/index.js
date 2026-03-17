@@ -1,8 +1,11 @@
 import http from 'http';
 import { readFile } from 'node:fs/promises';
 import httpProxy from 'http-proxy';
+import dotenv from 'dotenv'
+dotenv.config()
 
-const FRONTEND_ORIGIN = 'http://localhost:3000';
+const isLocalDev = process.env.LOCAL_DEV;
+const FRONTEND_ORIGIN = isLocalDev ? 'http://localhost:3000' : "https://app.trystamp.ai";
 const GATEWAY_PORT = 8080;
 const MAPPING_PATH = new URL('../vm_mapping.json', import.meta.url);
 
